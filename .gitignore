@@ -1,2 +1,7 @@
 *.cfg
 __pycache__/
+*.json
+*.h5
+*.npz
+*.tar.gz
+
