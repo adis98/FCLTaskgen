@@ -15,8 +15,10 @@ from Imagenet or VGG could have done the job.
 
 ´python3 distribute_dirichlet_nif.py --alpha ALPHA --nclient NCLIENTS --dataset_type DATASET´
 
-- Example
+- Examples
 
 ´python3 distribute_dirichlet_nif.py --alpha 1.0 --nclient 10 --dataset_type cifar10´
+
+´py distribute_dirichlet_nif.py --nclients=2 --dataset_type=cifar100 --alpha=1 --ni=0.42´
 
 - Datasets are saved in /data/distributed folder. Only indices are saved.
