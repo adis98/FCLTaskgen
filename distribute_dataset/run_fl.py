@@ -27,7 +27,7 @@ from sparse2coarse import sparse2coarse
 warnings.filterwarnings("ignore", category=UserWarning)
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 EPOCHS = 2
-ROUNDS = 1
+ROUNDS = 100
 
 class Net(nn.Module):
     """Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')"""
@@ -190,7 +190,7 @@ def main(alpha, clientid, repetition):
             config=fl.server.ServerConfig(num_rounds=ROUNDS),
             strategy=strategy,
         )
-    torch.save(model, f'./models/{alpha}_{clientid}_{repetition}')
+    torch.save(model, f'./models/{alpha}_{clientid}_{repetition}.pth')
 
 
 if __name__ == '__main__':
