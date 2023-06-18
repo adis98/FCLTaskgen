@@ -27,7 +27,7 @@ from sparse2coarse import sparse2coarse
 warnings.filterwarnings("ignore", category=UserWarning)
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 EPOCHS = 2
-ROUNDS = 100
+ROUNDS = 30
 
 class Net(nn.Module):
     """Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')"""
