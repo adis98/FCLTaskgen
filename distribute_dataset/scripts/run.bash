@@ -4,14 +4,14 @@ run_fl_experiment() {
     local alpha=$1
     local client_id=$2
     local replication=$3
-    python3 -m run_fl --alpha $alpha --clientid $client_id --replication $replication > output/${alpha}_${client_id}_${replication}.txt 2>&1 &
+    python3 -m run_fl --alpha $alpha --clientid $client_id --replication $replication > output/updated_${alpha}_${client_id}_${replication}.txt 2>&1 &
 }
 
 alphas=(
+    1000
     1
     10
     100
-    1000
 )
 
 for a in "${alphas[@]}"; do
